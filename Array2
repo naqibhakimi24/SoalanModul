@@ -32,6 +32,6 @@ int main()
 	}
 
 
-	system("pause");
+	system("pause"); //optional if your computer is suck
 	return 0;
 }
