@@ -1,0 +1,34 @@
+//array of strings
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	const int NUM_WORKER = 5; //set number of employees
+	int hours[NUM_WORKER];//array to hold each employee working hours
+	int hours2[NUM_WORKER];
+	double payRate; //hourly rate for all employees
+	double grossPay; //an employee gross pay
+
+	//input hours worked by employee
+	cout << "Please enter your working hours" << endl;
+	for (int i = 0; i < 5; i++)
+	{
+		cout << "Worker " << i + 1 << endl;
+		cin >> hours[i];
+		hours[i] = hours[i]; //copy array to array
+	}
+	//input the hourly rate for ALL workers
+	cout << "Please enter the pay rate for ALL:" << endl;
+	cin >> payRate;
+
+	for (int i = 0; i < 5; i++)
+	{
+		grossPay = hours[i] * payRate;
+		cout << "The grosspay for worker " << i + 1 << " is:RM " << grossPay << endl << endl;
+	}
+
+
+	system("pause");
+	return 0;
+}
