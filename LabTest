@@ -1,0 +1,43 @@
+//This program is to group the pupils based on id numbers
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	double id_number, bus_group;
+	
+	do
+	{
+		cout << "Please enter you id from 100 to 200 (0 to terminate): " << endl; //Input
+		cin >> id_number;
+		if (id_number >= 100 && id_number <= 200) { //To make sure the id input is in range
+			{
+				bus_group = id_number / 5; //To determine which group they are in
+			}
+			if (bus_group >= 20 && bus_group <= 25)
+			{
+				cout << "You are in bus A" << endl;
+			}
+			else if (bus_group >= 26 && bus_group <= 30)
+			{
+				cout << "You are in bus B" << endl;
+			}
+			else if (bus_group >= 31 && bus_group <= 35)
+			{
+				cout << "You are in bus C" << endl;
+			}
+			else
+			{
+				cout << "You are in bus D" << endl;
+			}
+		}
+		else if (id_number==0)
+		{
+			cout << "Bye" << endl;
+		}
+		else
+		{
+			cout << "The id is invalid" << endl; //The output if the id is not in range
+		}
+	} while (id_number > 0);
+}
